@@ -1,0 +1,7 @@
+{
+  "name": "canvas-painter-api",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^6.2.9"
+  }
+}
