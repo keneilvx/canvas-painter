@@ -2,6 +2,7 @@
   "name": "canvas-painter-api",
   "license": "MIT",
   "dependencies": {
-    "mongoose": "^6.2.9"
+    "mongoose": "^6.2.9",
+    "vue-router": "^4.0.14"
   }
 }
