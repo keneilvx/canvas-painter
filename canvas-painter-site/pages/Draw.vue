@@ -16,8 +16,8 @@
         <div class="row justify-content-center">
         <div class="brush-size" :style="'width:' +pen_radius +'px; height:' +pen_radius +'px; background-color:' +pen_color  "></div>
         </div>
-        <b-input type="number" v-model="nib_size" style="width: 60px" @change="validSize"></b-input>
-        <b-button class="mt-1 " @click="clearCanvas">Clear</b-button>
+        <b-input class="" type="number" v-model="nib_size" style="width: 60px" @change="validSize"></b-input>
+        <b-button class="mt-1 clear" @click="clearCanvas">Clear</b-button>
       </div>
       <canvas
         id="canvas"
@@ -130,7 +130,6 @@ export default {
 
 <style scoped>
 
-
 .canvas {
   margin-top: 20px;
   cursor: crosshair;
@@ -146,6 +145,7 @@ input[type="color"] {
 }
 .brushes{
   background-color: #ccc;
+  border-radius: 5px;
   width: 80px;
   z-index: 999;
   position: absolute;
@@ -176,5 +176,17 @@ input[type="color"] {
   align-content: center;
   align-items: center;
   margin: 10px;
+}
+
+.colors{
+  /*color: #fa5531;*/
+  /*color: #244aad;*/
+  color: #1e3899
+}
+
+.clear{
+  border: 1px solid red;
+  background-color: #CCC;
+  color: red;
 }
 </style>
