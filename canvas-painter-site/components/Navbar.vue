@@ -32,6 +32,7 @@ export default {
 
   h4{
     font-family: 'Shadows Into Light', cursive;
+    color: #FFFFFF;
   }
   .navbar-site{
     background-color: #1e3899;

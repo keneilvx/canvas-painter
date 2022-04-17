@@ -32,6 +32,7 @@ export default {
     height: 200px;
     margin-top: -200px;
     background-color: #1e3899;
+    color: #FFFFFF;
 
   }
 </style>

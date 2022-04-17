@@ -18,6 +18,7 @@
         </div>
         <b-input class="" type="number" v-model="nib_size" style="width: 60px" @change="validSize"></b-input>
         <b-button class="mt-1 clear" @click="clearCanvas">Clear</b-button>
+        <b-button class="mt-1 clear" @click="save">Save</b-button>
       </div>
       <canvas
         id="canvas"
@@ -46,6 +47,7 @@ export default {
       rubber_size: 2,
       nib_size: 1,
       canvas_context: null,
+      saveImage: null,
 
     }
 
@@ -67,6 +69,7 @@ export default {
   mounted(){
     //mounts canvas in the dom and sets a height 620
     this.canvas_context = document.getElementById('canvas').getContext("2d")
+     this.savedImage = new Image();
     this.canvas_context.canvas.width = window.innerWidth;
     this.canvas_context.canvas.height = 620;
   },
@@ -123,8 +126,16 @@ export default {
       }if(this.nib_size < 1){
         this.nib_size = 1
       }
-    }
-  }
+    },
+
+  save(){
+  // get the data
+
+
+    this.canvas_context.toDataURL('png')
+}
+
+}
 }
 </script>
 
@@ -144,7 +155,8 @@ input[type="color"] {
   height: 32px;
 }
 .brushes{
-  background-color: #ccc;
+  background-color: rgba(64, 115, 115, 0.2);
+
   border-radius: 5px;
   width: 80px;
   z-index: 999;
